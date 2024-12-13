@@ -9,18 +9,51 @@
 ## Основная часть
 
 1. Попробуйте запустить playbook на окружении из `test.yml`, зафиксируйте значение, которое имеет факт `some_fact` для указанного хоста при выполнении playbook.
+### Ответ
+![image](https://github.com/user-attachments/assets/5196e5da-e432-434b-b638-30aad010c87f)
+
 2. Найдите файл с переменными (group_vars), в котором задаётся найденное в первом пункте значение, и поменяйте его на `all default fact`.
+### Ответ
+![image](https://github.com/user-attachments/assets/0f6e553a-de8b-46bd-aa29-47e92937d6fb)
+
 3. Воспользуйтесь подготовленным (используется `docker`) или создайте собственное окружение для проведения дальнейших испытаний.
+### Ответ
+![image](https://github.com/user-attachments/assets/f10bc44c-167a-4b0b-8e55-e84f5e557582)
+
 4. Проведите запуск playbook на окружении из `prod.yml`. Зафиксируйте полученные значения `some_fact` для каждого из `managed host`.
+### Ответ
+![image](https://github.com/user-attachments/assets/8673a13c-c43a-4a9f-afea-f5ea2c3fc2bc)
+
+
 5. Добавьте факты в `group_vars` каждой из групп хостов так, чтобы для `some_fact` получились значения: для `deb` — `deb default fact`, для `el` — `el default fact`.
+
 6.  Повторите запуск playbook на окружении `prod.yml`. Убедитесь, что выдаются корректные значения для всех хостов.
+### Ответ
+![image](https://github.com/user-attachments/assets/072cf1f3-aa2e-4f0b-b121-cdba54ce477e)
+
 7. При помощи `ansible-vault` зашифруйте факты в `group_vars/deb` и `group_vars/el` с паролем `netology`.
+### Ответ
+![image](https://github.com/user-attachments/assets/321bc6c6-1dfd-44b6-abb4-453f7f11205a)
+
 8. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь в работоспособности.
+### Ответ
+![image](https://github.com/user-attachments/assets/bc677f3c-2109-47e0-b4a8-3d21913e1fa1)
+
 9. Посмотрите при помощи `ansible-doc` список плагинов для подключения. Выберите подходящий для работы на `control node`.
+### Ответ
+![image](https://github.com/user-attachments/assets/cc8e94cd-c4ff-46c9-86d4-eaa355fca675)
+
 10. В `prod.yml` добавьте новую группу хостов с именем  `local`, в ней разместите localhost с необходимым типом подключения.
+
 11. Запустите playbook на окружении `prod.yml`. При запуске `ansible` должен запросить у вас пароль. Убедитесь, что факты `some_fact` для каждого из хостов определены из верных `group_vars`.
+### Ответ
+![image](https://github.com/user-attachments/assets/c1929a08-7e63-4118-8196-248f374840d5)
+
 12. Заполните `README.md` ответами на вопросы. Сделайте `git push` в ветку `master`. В ответе отправьте ссылку на ваш открытый репозиторий с изменённым `playbook` и заполненным `README.md`.
+### Ответ
+
 13. Предоставьте скриншоты результатов запуска команд.
+
 
 ## Необязательная часть
 
